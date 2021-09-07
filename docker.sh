@@ -24,7 +24,7 @@ docker-psql-wipe () {
     "
 }
 
-# List all visible tables in PostgreSQL database
+# List all visible tables in PostgreSQL database container
 docker-psql-tables () {
     echo "mtilda: Listing all tables in PostgreSQL database '${1:-postgres}' in container '${2:-db}'"
 
@@ -35,7 +35,7 @@ docker-psql-tables () {
     docker-compose exec ${2:-db} psql -U ${1:-postgres} -c "\d"
 }
 
-# Run any query in PostgreSQL database
+# Run any query in PostgreSQL database container
 docker-psql-query () {
     echo "mtilda: Executing query in PostgreSQL database '${2:-postgres}' in container '${3:-db}'"
 
