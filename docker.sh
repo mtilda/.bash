@@ -23,3 +23,14 @@ docker-psql-wipe () {
     GRANT ALL ON SCHEMA public TO public;
     "
 }
+
+# List all visible tables in database
+docker-psql-tables () {
+    echo "mtilda: Listing all tables in PostgreSQL database '${1:-postgres}' in container '${2:-db}'"
+
+    echo "mtilda: docker-compose up -d ${2:-db}"
+    docker-compose up -d ${2:-db}
+
+    echo "mtilda: docker-compose exec ${2:-db} psql -U ${1:-postgres} -c \"\d\""
+    docker-compose exec ${2:-db} psql -U ${1:-postgres} -c "\d"
+}
