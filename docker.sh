@@ -6,4 +6,4 @@
 #   - all build cache
 # 
 # Answer y to the warning prompt
-docker-wipe () { docker system prune -a --volumes -f; }
+docker-destroy () { docker system prune -a --volumes -f; }
