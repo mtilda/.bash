@@ -1,3 +1,5 @@
-parse_git_branch() {
+# Return the current git branch
+# Example: "main"
+parse_git_branch () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
