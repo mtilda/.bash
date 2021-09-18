@@ -2,7 +2,7 @@
 # user, pwd, git branch
 if command -v gbranchf &> /dev/null
 then
-  export PS1="\[\033[00m\]\u 👾\[\033[33m\] \$(gbranchf) \[\033[35m\]\w\n\[\033[00m\] 🍄 "
+  export PS1="\[\033[00m\]\u 👾\[\033[00m\] \$(gbranchf) \[\033[35m\]\w\n\[\033[00m\] 🍄 "
 else
   export PS1="\[\033[00m\]\u 👾 \[\033[35m\]\w\n\[\033[00m\] 🍄 "
 fi
