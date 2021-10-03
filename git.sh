@@ -13,3 +13,9 @@ gbranchf () {
     echo
   fi
 }
+
+gswitch () {
+  GIT_CURRENT_BRANCH=$(gbranch)
+  git checkout ${1:-$GIT_LAST_BRANCH}
+  GIT_LAST_BRANCH=$GIT_CURRENT_BRANCH
+}
