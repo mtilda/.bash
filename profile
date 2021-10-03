@@ -1,14 +1,14 @@
 # Absolute path to this file's directory
 mbash="$( cd "$( dirname "${BASH_SOURCE}" )" &> /dev/null && pwd )"
 
-# Init
-. $mbash/intro.sh
+# Management tools
 . $mbash/manage.sh
 
-# Main
+# General tools
 . $mbash/docker.sh
 . $mbash/git.sh
 . $mbash/uuid.sh
 
-# Style
+# UI
+. $mbash/intro.sh
 . $mbash/style.sh
