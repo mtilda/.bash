@@ -13,5 +13,3 @@ do
 done
 echo
 echo
-echo "Welcome back! I've missed you ❤️"
-echo
