@@ -1,14 +1,14 @@
 # Absolute path to this file's directory
-mbash="$( cd "$( dirname "${BASH_SOURCE}" )" &> /dev/null && pwd )"
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE}" )" &> /dev/null && pwd )"
 
 # Management tools
-. $mbash/manage.sh
+. $CURRENT_DIR/manage.sh
 
 # General tools
-. $mbash/docker.sh
-. $mbash/git.sh
-. $mbash/uuid.sh
+. $CURRENT_DIR/docker.sh
+. $CURRENT_DIR/git.sh
+. $CURRENT_DIR/uuid.sh
 
 # UI
-. $mbash/intro.sh
-. $mbash/style.sh
+. $CURRENT_DIR/intro.sh
+. $CURRENT_DIR/style.sh

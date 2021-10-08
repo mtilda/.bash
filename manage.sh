@@ -1,5 +1,5 @@
-# Tools for managing this directory
+# Tools for managing this profile
 
 msource () {
-  source $mbash/profile
+  source $CURRENT_DIR/profile
 }
