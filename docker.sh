@@ -1,4 +1,4 @@
-alias doc="docker-compose"
+alias dc="docker-compose"
 
 # Remove:
 #   - all stopped containers
@@ -8,22 +8,22 @@ alias doc="docker-compose"
 #   - all build cache
 # 
 # Answer y to the warning prompt
-docker-destroy () {
+d-destroy () {
     echo "mtilda: Destroy all expendable docker entities"
     
     docker system prune -a --volumes -f;
 }
 
 # Run any query in PostgreSQL database container
-docker-psql () {
+d-psql () {
     echo "mtilda: Execute query in PostgreSQL database '${2:-postgres}' in container '${3:-db}'"
 
-    docker-compose up -d ${3:-db}
-    docker-compose exec ${2:-db} psql -U ${2:-postgres} -c "${1}"
+    dc up -d ${3:-db}
+    dc exec ${2:-db} psql -U ${2:-postgres} -c "${1}"
 }
 
 # Drop all tables in database
-docker-psql-wipe () {
+d-psql-wipe () {
     echo "mtilda: Drop and recreate schema in PostgreSQL database '${1:-postgres}' in container '${2:-db}'"
 
     # Drop all tables
@@ -36,7 +36,7 @@ docker-psql-wipe () {
 }
 
 # List all visible tables in PostgreSQL database container
-docker-psql-tables () {
+d-psql-tables () {
     echo "mtilda: List all tables in PostgreSQL database '${1:-postgres}' in container '${2:-db}'"
 
     docker-psql "\d"
