@@ -1,3 +1,5 @@
+alias doc="docker-compose"
+
 # Remove:
 #   - all stopped containers
 #   - all networks not used by at least one container
@@ -36,7 +38,7 @@ docker-psql-tables () {
 }
 
 # Run any query in PostgreSQL database container
-docker-psql-query () {
+docker-psql () {
     echo "mtilda: Executing query in PostgreSQL database '${2:-postgres}' in container '${3:-db}'"
 
     echo "mtilda: docker-compose up -d ${3:-db}"
