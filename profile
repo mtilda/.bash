@@ -1,14 +1,18 @@
 # Absolute path to this file's directory
-CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE}" )" &> /dev/null && pwd )"
+CUR_DIR="$( cd "$( dirname "${BASH_SOURCE}" )" &> /dev/null && pwd )"
 
 # Management tools
-. $CURRENT_DIR/manage.sh
+. $CUR_DIR/manage.sh
 
 # General tools
-. $CURRENT_DIR/docker.sh
-. $CURRENT_DIR/git.sh
-. $CURRENT_DIR/uuid.sh
+. $CUR_DIR/docker.sh
+. $CUR_DIR/git.sh
+. $CUR_DIR/uuid.sh
+. $CUR_DIR/venv.sh
 
 # UI
-. $CURRENT_DIR/intro.sh
-. $CURRENT_DIR/style.sh
+. $CUR_DIR/intro.sh
+. $CUR_DIR/style.sh
+
+# Sandbox tools
+. $CUR_DIR/sandbox/profile
