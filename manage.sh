@@ -1,5 +1,5 @@
 # Tools for managing this profile
 
 msource () {
-  source $CURRENT_DIR/profile
+  source $CUR_DIR/profile
 }

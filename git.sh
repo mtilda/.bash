@@ -14,8 +14,14 @@ gbranchf () {
   fi
 }
 
+# Checkout a branch or checkout the previous branch
 gswitch () {
   GIT_CURRENT_BRANCH=$(gbranch)
   git checkout ${1:-$GIT_LAST_BRANCH}
   GIT_LAST_BRANCH=$GIT_CURRENT_BRANCH
+}
+
+# Delete all fully merged branches
+gclean () {
+  git for-each-ref --format '%(refname:short)' refs/heads | grep -v "master\|main" | xargs git branch -d
 }
