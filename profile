@@ -11,7 +11,7 @@ CUR_DIR="$( cd "$( dirname "${BASH_SOURCE}" )" &> /dev/null && pwd )"
 . $CUR_DIR/venv.sh
 
 # UI
-. $CUR_DIR/intro.sh
+# . $CUR_DIR/intro.sh
 . $CUR_DIR/style.sh
 
 # Sandbox tools
