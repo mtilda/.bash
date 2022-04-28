@@ -1,18 +1,19 @@
 # Absolute path to this file's directory
-CUR_DIR="$( cd "$( dirname "${BASH_SOURCE}" )" &> /dev/null && pwd )"
+MBASH_CUR_DIR="$( cd "$( dirname "${BASH_SOURCE}" )" &> /dev/null && pwd )"
 
 # Management tools
-. $CUR_DIR/manage.sh
+. $MBASH_CUR_DIR/manage.sh
 
 # General tools
-. $CUR_DIR/docker.sh
-. $CUR_DIR/git.sh
-. $CUR_DIR/uuid.sh
-. $CUR_DIR/venv.sh
+alias c="clear"
+. $MBASH_CUR_DIR/docker.sh
+. $MBASH_CUR_DIR/git.sh
+. $MBASH_CUR_DIR/uuid.sh
+. $MBASH_CUR_DIR/noise.sh
 
 # UI
-# . $CUR_DIR/intro.sh
-. $CUR_DIR/style.sh
+# . $MBASH_CUR_DIR/intro.sh
+. $MBASH_CUR_DIR/style.sh
 
 # Sandbox tools
-. $CUR_DIR/sandbox/profile
+. $MBASH_CUR_DIR/sandbox/profile

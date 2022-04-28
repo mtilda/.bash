@@ -1,5 +1,6 @@
 # Tools for managing this profile
 
 msource () {
-  source $CUR_DIR/profile
+  source $MBASH_CUR_DIR/profile
+  echo "Updated source '$MBASH_CUR_DIR/profile'"
 }
