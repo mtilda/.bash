@@ -10,6 +10,7 @@ alias c="clear"
 . $MBASH_CUR_DIR/git.sh
 . $MBASH_CUR_DIR/uuid.sh
 . $MBASH_CUR_DIR/noise.sh
+. $MBASH_CUR_DIR/terraform.sh
 
 # UI
 # . $MBASH_CUR_DIR/intro.sh
