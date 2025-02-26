@@ -13,7 +13,7 @@ alias c="clear"
 . $MBASH_CUR_DIR/terraform.sh
 
 # UI
-# . $MBASH_CUR_DIR/intro.sh
+#. $MBASH_CUR_DIR/intro.sh
 . $MBASH_CUR_DIR/style.sh
 
 # Sandbox tools
