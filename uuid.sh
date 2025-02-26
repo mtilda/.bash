@@ -3,7 +3,7 @@ uuid () {
 
   REGEX='^[0-9]*$'
   
-  if [[ $1 =~ REGEX ]] ; then
+  if [[ $1 =~ $REGEX ]] ; then
 
     count="${1:-1}"
 
