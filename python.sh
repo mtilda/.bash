@@ -9,7 +9,8 @@
 #
 # DESCRIPTION
 #     If a virtual environment is not detected, avenv creates one with a name
-#     based on the relative path to the current working directory.
+#     based on the relative path to the current working directory from the root
+#     of the current git repository.
 #
 # EXAMPLE USAGE
 #     In some directory:
